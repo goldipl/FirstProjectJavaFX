@@ -1,0 +1,6 @@
+/* JavaFX CSS  */
+
+.fieldstyle {
+	-fx-background-color:rgb(10%,100%,0%);
+  	-fx-text-fill:black;
+}
