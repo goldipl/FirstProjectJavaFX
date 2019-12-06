@@ -7,7 +7,7 @@
 My first Java FX Project. It's upgraded traditional Hello Application with `GUI` - Graphic User Interface.
 
 ## Technologies
-Project is created with:
+Project was created with:
 * Java 11
 * Java FX
 
