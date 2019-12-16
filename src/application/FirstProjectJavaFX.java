@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.BorderPane;
 
 
@@ -55,7 +56,7 @@ public class FirstProjectJavaFX extends Application {
 				BorderPane root_dlg = new BorderPane();
 				stage2.setScene(new Scene(root_dlg,300,200));
 				
-				Label msg = new Label("Witaj " + text1.getText() + " " + text2.getText() +"!");
+				Label msg = new Label("Hello " + text1.getText() + " " + text2.getText() +"!");
 				root_dlg.setCenter(msg);
 				
 				stage2.initOwner(stage);
@@ -64,6 +65,11 @@ public class FirstProjectJavaFX extends Application {
 			}
 			);
 			
+			//Add tooltip to button
+			
+			Tooltip t1 = new Tooltip("Run Application");
+			
+			button.setTooltip(t1);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
