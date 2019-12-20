@@ -44,9 +44,13 @@ public class FirstProjectJavaFX extends Application {
 			Button button = new Button("Click me now!");
 			button.setLayoutX(40);
 			button.setLayoutY(110);
+			
+			Button button2 = new Button("Clear textfields");
+			button2.setLayoutX(38);
+			button2.setLayoutY(150);
 			Group center_group = new Group();
 			root.setCenter(center_group);
-			center_group.getChildren().addAll(text1,text2,label1,label2,button);
+			center_group.getChildren().addAll(text1,text2,label1,label2,button,button2);
 			
 			
 			button.setOnAction(event->{
@@ -64,6 +68,12 @@ public class FirstProjectJavaFX extends Application {
 				stage2.show();
 			}
 			);
+			
+			button2.setOnAction(event->{
+					text1.setText("");
+					text2.setText("");
+					System.out.println("Wyczyszczono wszystkie pola tekstowe");
+				});	
 			
 			//Add tooltip to button
 			
