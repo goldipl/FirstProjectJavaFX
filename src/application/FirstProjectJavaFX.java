@@ -27,6 +27,7 @@ public class FirstProjectJavaFX extends Application {
 			Label label1 = new Label("Enter your name: "); 
 			label1.setLayoutX(10);
 			label1.setLayoutY(0);
+			
 			Label label2 = new Label("Enter your surname: ");
 			label2.setLayoutX(10);
 			label2.setLayoutY(50);
@@ -48,13 +49,23 @@ public class FirstProjectJavaFX extends Application {
 			Button button2 = new Button("Clear textfields");
 			button2.setLayoutX(38);
 			button2.setLayoutY(150);
+			
+			Label label3 = new Label("&");
+			label3.setLayoutX(80);
+			label3.setLayoutY(180);
+			
+			Button button3 = new Button("Your Lucky Number");
+			button3.setLayoutX(24);
+			button3.setLayoutY(200);
+			
 			Group center_group = new Group();
 			root.setCenter(center_group);
-			center_group.getChildren().addAll(text1,text2,label1,label2,button,button2);
+			center_group.getChildren().addAll(text1,text2,label1,label2,label3,button,button2,button3);
 			
+			// First button
 			
 			button.setOnAction(event->{
-				System.out.println("Button clicked");
+				System.out.println("Button1 clicked");
 				Stage stage2 = new Stage();
 				stage2.setTitle("Hello");
 				BorderPane root_dlg = new BorderPane();
@@ -69,17 +80,40 @@ public class FirstProjectJavaFX extends Application {
 			}
 			);
 			
+			// Second button
+			
 			button2.setOnAction(event->{
+					System.out.println("Button2 clicked");
 					text1.setText("");
 					text2.setText("");
 					System.out.println("Wyczyszczono wszystkie pola tekstowe");
 				});	
+			
+			// Third button
+			
+			button3.setOnAction(event->{
+				System.out.println("Button3 clicked");
+				Stage stage3 = new Stage();
+				stage3.setTitle("Lucky Number");
+				BorderPane root_dlg = new BorderPane();
+				stage3.setScene(new Scene(root_dlg,200,200));
+				
+				Label msg = new Label("Your Lucky Number is 7");
+				root_dlg.setCenter(msg);
+				
+				stage3.initOwner(stage);
+				stage3.initModality(Modality.WINDOW_MODAL);
+				stage3.show();
+			}
+			);
 			
 			//Add tooltip to button
 			
 			Tooltip t1 = new Tooltip("Run Application");
 			
 			button.setTooltip(t1);
+			
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
