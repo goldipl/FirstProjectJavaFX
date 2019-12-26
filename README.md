@@ -14,6 +14,7 @@ If you want to run these application you have to install JavaFX plugin and add J
 ## Version
 * `1.00` - traditional Hello Application with GUI
 * `1.01` - added *clear Button*
+* `1.02` - added *Your Lucky Number Button*
 
 ## Technologies
 Project was created with:
